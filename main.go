@@ -61,7 +61,7 @@ func characterMoves(c character) {
 func main() {
 	knight := knight{swordType: "normal", swordWeight: 5}
 	archer := archer{bow: "wood"}
-
+	fmt.Print(example())
 	fmt.Println("This knight: ")
 	characterMoves(knight)
 	fmt.Println("This archer: ")
