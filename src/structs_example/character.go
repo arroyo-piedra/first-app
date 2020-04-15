@@ -9,7 +9,7 @@
  * (c) Huli Inc
  */
 
-package struct_example
+package structs_example
 
 import "fmt"
 
@@ -19,32 +19,32 @@ type character interface {
 	defense() string
 }
 
-type knight struct {
+type Knight struct {
 	swordType   string
 	swordWeight int
 }
 
-func (k knight) attack() string {
+func (k Knight) Attack() string {
 	return "Use a sword"
 }
-func (k knight) defense() string {
+func (k Knight) Defense() string {
 	return "Use a shield"
 }
 
-type archer struct {
+type Archer struct {
 	bow string
 }
 
-func (a archer) attack() string {
+func (a Archer) Attack() string {
 	return "Use a bow"
 }
-func (a archer) defense() string {
+func (a Archer) Defense() string {
 	return "Dodge"
 }
 
 // With this function you only need to pass a character
 // and the interface is in charge of use the corresponding function
-func characterMoves(c character) {
+func CharacterMoves(c character) {
 	fmt.Println(c)
 	fmt.Println(c.attack())
 	fmt.Println(c.defense())
