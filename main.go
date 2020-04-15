@@ -1,10 +1,27 @@
+/**                   _
+ *  _             _ _| |_
+ * | |           | |_   _|
+ * | |___  _   _ | | |_|
+ * | '_  \| | | || | | |
+ * | | | || |_| || | | |
+ * |_| |_|\___,_||_| |_|
+ *
+ * (c) Huli Inc
+ */
+
 package main
 
 import (
 	"fmt"
 	"sync"
 	"time"
+
+	ex "github.com/arroyo-piedra/first-app/src/example"
 )
+
+func example() *ex.Example {
+	return ex.NewExample("Fabian")
+}
 
 type character interface {
 	attack() string
@@ -22,6 +39,7 @@ func (k knight) attack() string {
 func (k knight) defense() string {
 	return "Use a shield"
 }
+
 
 type archer struct {
 	bow string

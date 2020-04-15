@@ -2,5 +2,4 @@ version: '3.5'
 services:
   first-app:
     build: .
-    ports:
-      - 8080:80
+    image: arroyo-piedra/first-app
