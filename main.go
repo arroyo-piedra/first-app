@@ -16,56 +16,17 @@ import (
 	"sync"
 	"time"
 
-	ex "github.com/arroyo-piedra/first-app/src/example"
+	character "github.com/arroyo-piedra/first-app/src/struct_example"
 )
 
-func example() *ex.Example {
-	return ex.NewExample("Fabian")
-}
-
-type character interface {
-	attack() string
-	defense() string
-}
-
-type knight struct {
-	swordType   string
-	swordWeight int
-}
-
-func (k knight) attack() string {
-	return "Use a sword"
-}
-func (k knight) defense() string {
-	return "Use a shield"
-}
-
-
-type archer struct {
-	bow string
-}
-
-func (a archer) attack() string {
-	return "Use a bow"
-}
-func (a archer) defense() string {
-	return "Dodge"
-}
-
-func characterMoves(c character) {
-	fmt.Println(c)
-	fmt.Println(c.attack())
-	fmt.Println(c.defense())
-}
-
 func main() {
-	knight := knight{swordType: "normal", swordWeight: 5}
-	archer := archer{bow: "wood"}
+	knight := character.Knight{swordType: "normal", swordWeight: 5}
+	archer := character.Archer{bow: "wood"}
 	fmt.Print(example())
 	fmt.Println("This knight: ")
 	characterMoves(knight)
 	fmt.Println("This archer: ")
-	characterMoves(archer)
+	CharacterMoves(archer)
 
 	count("cat")
 	count("dog")
