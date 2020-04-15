@@ -15,13 +15,13 @@ import "fmt"
 
 // interface that define two "methods"
 type character interface {
-	attack() string
-	defense() string
+	Attack() string
+	Defense() string
 }
 
 type Knight struct {
-	swordType   string
-	swordWeight int
+	SwordType   string
+	SwordWeight int
 }
 
 func (k Knight) Attack() string {
@@ -32,7 +32,7 @@ func (k Knight) Defense() string {
 }
 
 type Archer struct {
-	bow string
+	Bow string
 }
 
 func (a Archer) Attack() string {
@@ -46,6 +46,6 @@ func (a Archer) Defense() string {
 // and the interface is in charge of use the corresponding function
 func CharacterMoves(c character) {
 	fmt.Println(c)
-	fmt.Println(c.attack())
-	fmt.Println(c.defense())
+	fmt.Println(c.Attack())
+	fmt.Println(c.Defense())
 }
