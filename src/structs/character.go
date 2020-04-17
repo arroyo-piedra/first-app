@@ -9,7 +9,7 @@
  * (c) Huli Inc
  */
 
-package structs_example
+package structs
 
 import "fmt"
 

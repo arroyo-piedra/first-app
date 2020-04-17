@@ -13,11 +13,27 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func main() {
 
+	// Var declaration, arrays  and slices
+
+	var number int = 5
+
+	fmt.Println(number)
+
+	/*
+		arrayExample := [6]int{2, 3, 5, 7, 11, 13}
+
+		for index, element := range arrayExample {
+			fmt.Println(index, "=>", element)
+		}
+	*/
+	/*
+		var s []int = arrayExample[1:4]
+		fmt.Println(s)
+	*/
 	// Struct examples
 
 	/*knight := character.Knight{SwordType: "normal", SwordWeight: 5}
@@ -29,36 +45,36 @@ func main() {
 
 	// Gorotuines examples
 
-	/*count("cat")
+	/*go count("cat")
 	count("dog")
 
-	// go rutines counter
-	var wg sync.WaitGroup
-	wg.Add(1)
+		// go rutines counter
+		var wg sync.WaitGroup
+		wg.Add(1)
 
-	// anonimus function
-	go func() {
-		count("sheeps")
-		wg.Done()
-	}()
+		// anonimus function
+		go func() {
+			count("sheeps")
+			wg.Done()
+		}()
 
-	wg.Wait()*/
+		wg.Wait()*/
 
-	array := []int{7, 2, 8, -9, 4, 0}
+	/*array := []int{7, 2, 8, -9, 4, 0}
 
 	channel := make(chan int)
 	go sum(array[:len(array)/2], channel)
 	go sum(array[len(array)/2:], channel)
 	last3, first3 := <-channel, <-channel // receive from c
 
-	fmt.Println(last3, first3, last3+first3)
+	fmt.Println(last3, first3, last3+first3)*/
 
 }
 
 func count(animal string) {
-	for i := 1; i < 5; i++ {
+	for i := 1; true; i++ {
 		fmt.Println(i, animal)
-		time.Sleep(time.Millisecond * 500)
+		//time.Sleep(time.Millisecond * 500)
 	}
 }
 
